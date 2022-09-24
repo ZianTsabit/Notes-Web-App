@@ -20,8 +20,24 @@ if(isset($_SESSION['id']) && isset($_SESSION['username']) && isset($_SESSION['ro
             <a href="profile.php"> Profile </a>
             <a href="#logout">Logout</a>
         </div>
+        <!-- Page Content -->
         <div class="content">
             <h1>Hello, <?php echo $_SESSION['username']; ?> </h1>
+            
+            <div class="notecontent">
+                <form class="noteform" action="create.php" method="post">
+                    <div class="notecontainer">
+                        <details>
+                            
+                            <summary>Add Note</summary>
+                            <input type="text" placeholder="Title" name="title" required>
+                            <input type="text" placeholder="Take a note ..." name="content" required>
+                            <a class="createbutton" href="create.php">create</a>
+                        </details>
+                    </div>
+                </form>
+            </div>
+
         </div>
 
         <div class="overlay" id="logout">

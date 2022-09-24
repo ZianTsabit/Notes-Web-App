@@ -5,6 +5,13 @@
     padding: 30px 25px;
     background: white;
   }
+
+  .noteform {
+    margin: 0 auto;
+    width: 300px;
+    padding: 0 25px;
+    background: white;
+  }
   
   /* Full-width inputs */
   input[type=text], input[type=password] {
@@ -46,6 +53,16 @@
     cursor: pointer;
     width: 100%;
   }
+
+  a.createbutton {
+    background-color: #55a1ff;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
   
   /* Add a hover effect for buttons */
   button:hover {
@@ -62,6 +79,15 @@
   .container {
     padding: 16px;
   }
+
+  .notecontainer {
+    margin: 0 auto;
+    width: 300px;
+    padding: 0 25px;
+    background: white;
+  }
+
+
   
   /* The "Forgot password" text */
   span.psw {
