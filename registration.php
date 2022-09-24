@@ -75,21 +75,13 @@
 
                 if ($result) {
 
-                    echo "<div class='form'>
-                         <h3>You are registered successfully.</h3><br/>
-                         </div>";
+                    echo "<div class='form'><h3>You are registered successfully.</h3><br/><p class='link'>Click here to <a href='login.php'>Login</a></p></div>";
                     
-                    header("Location: home.php");
-                    exit();
                 
                 }else{
                     
-                    echo "<div class='form'>
-                         <h3>You are register failed.</h3><br/>
-                         </div>";
+                    echo "<div class='form'><h3>You are register failed.</h3><br/><p class='link'>Click here to <a href='registration.php'>registration</a> again.</p></div>";
                     
-                    header("Location: register.php");
-                    exit();
                 }
 
             }
