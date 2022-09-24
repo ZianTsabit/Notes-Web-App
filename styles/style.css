@@ -1,6 +1,9 @@
  /* Bordered form */
- form {
-    border: 3px solid #f1f1f1;
+  form {
+    margin: 50px auto;
+    width: 300px;
+    padding: 30px 25px;
+    background: white;
   }
   
   /* Full-width inputs */
@@ -15,7 +18,7 @@
   
   /* Set a style for all buttons */
   button {
-    background-color: #04AA6D;
+    background-color: #55a1ff;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;

@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Notes Web App</title>
+    <title>Notes Web App | Login</title>
 </head>
 <body>
-    <form action="login.php" method="post">
+    <form class=form action="login.php" method="post">
         <?php if (isset($_GET['error'])) { ?>
           <<p class="error"> <?php echo $_GET['error']; ?></p>
         <?php } ?>
@@ -20,7 +20,8 @@
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="password" required>
       
-          <button type="submit">Login</button>
+          <button class=button type="submit">Login</button>
+          <p>Don't have an account?<a href="registration.php">Registration Now</a></p>
         </div>
     </form> 
 </body>
