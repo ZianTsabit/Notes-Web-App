@@ -105,7 +105,7 @@
                     <label for="psw"><b>Password</b></label>
                     <input type="password" placeholder="Enter Password" name="password" required>
       
-                    <input type="submit" name="submit" value="Register">
+                    <button class=button type="submit">Register</button>
                     <p>Already have an account?<a href="index.php">Login here</a></p>
                 </div>
         </form> 
