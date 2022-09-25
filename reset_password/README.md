@@ -2,17 +2,17 @@
 
 Fungsi dimana *user* dapat mengubah *password*-nya ketika lupa.
 
-Berikut cara kerja *Reset Password*:
+Berikut alur *Reset Password*:
 
 ```
-{ Di Halaman Reset Password Page }
- 1. Check username exist
-     [T] Send OTP to email. Save OTP in Session.
-     [F] Display Error message. END.
- 2. Check OTP
-     [T] Change Password.
-     [F] Back to 2.
+[reset_pass_page]   Input User Name
+[send_otp]          Check UserName, send OTP to email
+[reset_pass_otp]    Input OTP
+[check_otp]         Check OTP, delete OTP in SESSION
+[change_password]   Change Password
 ```
+
+Jika terjadi kesalahan pada salah satu tahap `Check`, maka akan kembali ke halaman diatasnya.
 
 Pengiriman OTP melalui email menggunakan fungsi bawaan *PHP* yaitu `mail()` yang membutuhkan program `sendmail`.
 

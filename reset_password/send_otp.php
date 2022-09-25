@@ -16,7 +16,7 @@ function validate($data){
 
 function GenerateOTP($digits){
       
-    $num = "1234567890";
+    $num = "9623874501";
     $result = "";
 
     for ($i = 1; $i <= $digits; $i++) {
@@ -58,7 +58,9 @@ if (isset($_POST['username'])){
             $row = mysqli_fetch_assoc($result);
             $email = $row["EmailAdress"];
 
+            $_SESSION["RPUserName"] = $username; // Reset Password User Name
             SendOTPMail($email);
+
             header("Location: reset_pass_otp.php");
             exit();
 

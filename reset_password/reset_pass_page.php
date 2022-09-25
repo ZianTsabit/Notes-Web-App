@@ -10,7 +10,7 @@
     <title> Notes Web App | Reset Password </title>
 </head>
 <body>
-    <form class=form action="reset_password.php" method="post">
+    <form class=form action="send_otp.php" method="post">
         <?php if (isset($_GET['error'])) { ?>
           <<p class="error"> <?php echo $_GET['error']; ?></p>
         <?php } ?>
