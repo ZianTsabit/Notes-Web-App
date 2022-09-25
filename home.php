@@ -41,7 +41,6 @@ if(isset($_SESSION['id']) && isset($_SESSION['username']) && isset($_SESSION['ro
                             <th scope="col">#</th>
                             <th scope="col">Title</th>
                             <th scope="col">Content</th>
-                            <th scope="col">Priority</th>
                             <th scope="col">Actions</th>
                         </tr>
                     </thead>
