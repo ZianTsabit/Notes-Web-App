@@ -74,6 +74,11 @@ if(isset($_SESSION['id']) && isset($_SESSION['username']) && isset($_SESSION['ro
             </div>
             </div>
         <?php
+            } else if ($_SESSION['role'] === 'Admin'){
+
+
+
+
             }
         ?>
         </div>
