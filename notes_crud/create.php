@@ -49,13 +49,10 @@
 
                 $result = mysqli_query($conn, $sql);
                 
-                echo $result;
-
                 if ($result) {
 
                     echo "<div class='form'><h3>Your notes added successfully.</h3><br/><p class='link'><a href='../home.php'>OK</a></p></div>";
                     
-                
                 }else{
                     
                     echo "<div class='form'><h3>You are failed to add notes.</h3><br/><p class='link'><a href='../home.php'>OK</a></p></div>";
@@ -65,7 +62,6 @@
             }
 
         }else{ ?>
-
             <form class=form action="" method="post">   
                     <div class="container">
                     <label ><b>Title</b></label>

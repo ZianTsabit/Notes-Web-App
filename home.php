@@ -32,10 +32,10 @@ if(isset($_SESSION['id']) && isset($_SESSION['username']) && isset($_SESSION['ro
                 $sql = "SELECT * FROM notes WHERE User_ID=$user_id";
                 $result = mysqli_query($conn, $sql);
         ?>
-            <div class="container-fluid">
-            <div class="row">
-            <div class="col">
-                <table class="table">
+            <div>
+            <div>
+            <div>
+                <table>
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -69,14 +69,13 @@ if(isset($_SESSION['id']) && isset($_SESSION['username']) && isset($_SESSION['ro
                         ?>
                     </tbody>
                 </table>
-                <a class="createbutton" href="notes_crud/create.php">Add a new note</a>
+                <a href="notes_crud/create.php">Add a new note</a>
             </div>
             </div>
             </div>
         <?php
             }
         ?>
-        
         </div>
 
         <div class="overlay" id="logout">
