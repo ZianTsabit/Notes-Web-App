@@ -67,8 +67,8 @@
                     <label ><b>Title</b></label>
                     <input type="text" placeholder="Enter notes title" name="title" required>  
             
-                    <label ><b>Content</b></label>
-                    <input type="text" placeholder="Enter notes content" name="content" required>
+                    <label ><b>Content</b></label></br>
+                    <textarea class="form-control" name="content" placeholder="Take a notes" rows="3" required></textarea>
       
                     <button class=button type="submit">Add Notes</button>
                 </div>
