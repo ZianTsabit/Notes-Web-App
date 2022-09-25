@@ -7,7 +7,7 @@ function isStrSame($str1, $str2){
 }
 
 if(
-    isset($_SESSION['id']) 
+    isset($_SESSION['ID']) 
     && isset($_SESSION["RPUserName"])
     && isset($_SESSION["OTP"])
     && isset($_POST["OTP"])
@@ -15,7 +15,7 @@ if(
     if (isStrSame($_SESSION["OTP"], $_POST["OTP"])){
         $_SESSION["AllowChangePassword"] = true;
         unset($_SESSION["OTP"]);
-        header("Location: change_password.php");
+        header("Location: change_pass_page.php");
         exit();
     } else {
         header("Location: reset_pass_otp.php?error=Incorrect OTP");

@@ -5,7 +5,7 @@ session_start();
 
 // Sebelumnya sudah request OTP 
 if(
-    isset($_SESSION['id']) 
+    isset($_SESSION['ID']) 
     && isset($_SESSION["RPUserName"])
     && isset($_SESSION["OTP"])
 ) {
@@ -24,7 +24,7 @@ if(
     <body>
         <form class=form action="check_otp.php" method="post">
             <?php if (isset($_GET['error'])) { ?>
-              <<p class="error"> <?php echo $_GET['error']; ?></p>
+              <p class="error"> <?php echo $_GET['error']; ?></p>
             <?php } ?>
 
             <div class="container">

@@ -1,4 +1,7 @@
 <?php
+    
+    // DB Lokal Alif
+    // mysql --user=note_web_app --password=Password123+ --database=notes_app_db
 
     $sname = "localhost";
     $uname = "root";
@@ -11,3 +14,5 @@
     if(!$conn){
         echo "Connection Failed";
     }
+
+?>

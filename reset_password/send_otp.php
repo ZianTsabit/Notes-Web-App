@@ -52,12 +52,13 @@ if (isset($_POST['username'])){
     } else {
         
         $query = "SELECT * FROM users WHERE UserName='$username' ";
-        $result = mysqli_query($conn, $sql);
+        $result = mysqli_query($conn, $query);
         if (mysqli_num_rows($result) === 1) {
 
             $row = mysqli_fetch_assoc($result);
-            $email = $row["EmailAdress"];
+            $email = $row["EmailAddress"];
 
+            $_SESSION["ID"] = $row["ID"]; // Reset Password User Name
             $_SESSION["RPUserName"] = $username; // Reset Password User Name
             SendOTPMail($email);
 
