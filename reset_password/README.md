@@ -9,7 +9,8 @@ Berikut alur *Reset Password*:
 [send_otp]          Check UserName, send OTP to email
 [reset_pass_otp]    Input OTP
 [check_otp]         Check OTP, delete OTP in SESSION
-[change_password]   Change Password
+[change_pass_page]  Input New Password
+[change_password]   Check New Password, Update Record in Database
 ```
 
 Jika terjadi kesalahan pada salah satu tahap `Check`, maka akan kembali ke halaman diatasnya.
