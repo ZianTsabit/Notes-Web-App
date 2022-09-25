@@ -39,31 +39,31 @@
 
             if (empty($emailaddress)) {
 
-                header("Location: index.php?error=Email Address is required");
+                header("Location: registration.php?error=Email Address is required");
 
                 exit();
 
             }else if(empty($firstname)){
 
-                header("Location: index.php?error=First Name is required");
+                header("Location: registration.php?error=First Name is required");
 
                 exit();
 
             }else if(empty($lastname)){
 
-                header("Location: index.php?error=Last Name is required");
+                header("Location: registration.php?error=Last Name is required");
 
                 exit();
             
             }else if (empty($username)) {
 
-                header("Location: index.php?error=User Name is required");
+                header("Location: registration.php?error=User Name is required");
 
                 exit();
 
             }else if(empty($pass)){
 
-                header("Location: index.php?error=Password is required");
+                header("Location: registration.php?error=Password is required");
 
                 exit();
 

@@ -22,22 +22,62 @@ if(isset($_SESSION['id']) && isset($_SESSION['username']) && isset($_SESSION['ro
         </div>
         <!-- Page Content -->
         <div class="content">
-            <h1>Hello, <?php echo $_SESSION['username']; ?> </h1>
+            <h1>Hello, <?php echo $_SESSION['role']; ?> <?php echo $_SESSION['username']; ?> </h1>
+        
+        <?php
+            if ($_SESSION['role'] === 'User') {
             
-            <div class="notecontent">
-                <form class="noteform" action="create.php" method="post">
-                    <div class="notecontainer">
-                        <details>
-                            
-                            <summary>Add Note</summary>
-                            <input type="text" placeholder="Title" name="title" required>
-                            <input type="text" placeholder="Take a note ..." name="content" required>
-                            <a class="createbutton" href="create.php">create</a>
-                        </details>
-                    </div>
-                </form>
+                include "db_conn.php";
+                $user_id = $_SESSION['id'];
+                $sql = "SELECT * FROM notes WHERE User_ID=$user_id";
+                $result = mysqli_query($conn, $sql);
+        ?>
+            <div class="container-fluid">
+            <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Content</th>
+                            <th scope="col">Priority</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            if ($result->num_rows > 0) {
+                                $i = 0;
+                                while($row = $result->fetch_assoc()) {
+                                    $i++;
+                                    $id = $row["Notes_ID"];
+                                    $title = $row["Title"];
+                                    $content = $row["Content"];
+                                    echo "
+                                        <tr>
+                                            <th scope='row'>$i</th>
+                                            <td>$title</td>
+                                            <td>$content</td>
+                                            <td>
+                                                <a class='btn btn-secondary' href='notes_crud/read.php?id=$id'>Read</a> 
+                                                <a class='btn btn-secondary' href='notes_crud/update.php?id=$id'>Edit</a> 
+                                                <a class='btn btn-danger' href='notes_crud/delete.php?id=$id'>Delete</a>
+                                            </td>
+                                        </tr>";
+                                }
+                            }
+                        ?>
+                    </tbody>
+                </table>
+                <a class="createbutton" href="notes_crud/create.php">Add a new note</a>
             </div>
-
+            </div>
+            </div>
+        <?php
+            }
+        ?>
+        
         </div>
 
         <div class="overlay" id="logout">
@@ -47,11 +87,13 @@ if(isset($_SESSION['id']) && isset($_SESSION['username']) && isset($_SESSION['ro
                 <a class="logoutbutton" href="logout.php">Log Out</a>
             </div>
         </div>
+    
+    
 
     </body>
     </html>
 
-    <?php 
+<?php 
 }else{
     header("Location: index.php");
     exit();
