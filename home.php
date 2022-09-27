@@ -59,9 +59,9 @@ if(isset($_SESSION['id']) && isset($_SESSION['username']) && isset($_SESSION['ro
                                             <td>$title</td>
                                             <td>$content</td>
                                             <td>
-                                                <a class='btn btn-secondary' href='notes_crud/read.php?id=$id'>Read</a> 
-                                                <a class='btn btn-secondary' href='notes_crud/update.php?id=$id'>Edit</a> 
-                                                <a class='btn btn-danger' href='notes_crud/delete.php?id=$id'>Delete</a>
+                                                <a href='notes_crud/read.php?id=$id'>Read</a> 
+                                                <a href='notes_crud/update.php?id=$id'>Edit</a> 
+                                                <a href='notes_crud/delete.php?id=$id'>Delete</a>
                                             </td>
                                         </tr>";
                                 }
