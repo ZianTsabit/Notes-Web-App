@@ -3,9 +3,9 @@
 session_start();
 
 // Connect ke database
-$path = $_SERVER['DOCUMENT_ROOT'];
-$path .= "/db_conn.php";
-include_once($path);
+// $path = $_SERVER['DOCUMENT_ROOT'];
+// $path .= "db_conn.php";
+include("../db_conn.php");
 
 // String comparison
 function isStrSame($str1, $str2)
@@ -28,7 +28,7 @@ if (
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/styles/style.css">
+        <link rel="stylesheet" href="../styles/style.css">
         <title>Notes Web App | Home</title>
     </head>
 
