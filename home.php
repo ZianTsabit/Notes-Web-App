@@ -75,10 +75,8 @@ if(isset($_SESSION['id']) && isset($_SESSION['username']) && isset($_SESSION['ro
             </div>
         <?php
             } else if ($_SESSION['role'] === 'Admin'){
-
-
-
-
+                header("Location: /util_admin/home_admin.php");
+                exit();
             }
         ?>
         </div>

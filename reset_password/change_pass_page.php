@@ -29,10 +29,10 @@ if(
 
         <div class="container">
           <label for="uname"><b>New Password</b></label>
-          <input type="text" placeholder="Enter New Password" name="new_password" required>
+          <input type="password" placeholder="Enter New Password" name="new_password" required>
 
           <label for="uname"><b>Confirm New Password</b></label>
-          <input type="text" placeholder="Enter New Password Again" name="new_password_confirm" required>
+          <input type="password" placeholder="Enter New Password Again" name="new_password_confirm" required>
       
           <button class=button type="submit">Reset Password</button>
         </div>
