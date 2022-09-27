@@ -35,7 +35,7 @@ if (
     <body>
         <!-- Sidebar -->
         <div class="sidebar">
-            <a class="active" href="/home.php"> Home </a>
+            <a class="active" href="../home.php"> Home </a>
             <a href="profile.php"> Profile </a>
             <a href="#logout">Logout</a>
         </div>
@@ -81,7 +81,7 @@ if (
             <div class="wrapper">
                 <h2>Are you sure want to log out ?</h2>
                 <a class="button" href="">Cancel</a>
-                <a class="logoutbutton" href="/logout.php">Log Out</a>
+                <a class="logoutbutton" href="../logout.php">Log Out</a>
             </div>
         </div>
     </body>
@@ -91,7 +91,7 @@ if (
 
 } else {
 
-    header("Location: /home.php");
+    header("Location: ../home.php");
     exit();
 }
 

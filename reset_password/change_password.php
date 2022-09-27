@@ -3,8 +3,8 @@
 session_start();
 // include "db_conn.php";
 // Include Database
-$path = $_SERVER['DOCUMENT_ROOT'];
-$path .= "/db_conn.php";
+// $path = $_SERVER['DOCUMENT_ROOT'];
+$path = "../db_conn.php";
 include_once($path);
 
 if(
@@ -40,7 +40,7 @@ if(
             if ($result) { // Success
                 session_unset();
                 session_destroy();
-                header("Location: /home.php");
+                header("Location: ../home.php");
                 exit();
             } else {
                 header("Location: change_pass_page.php?error=Update Error");

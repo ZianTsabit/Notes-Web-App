@@ -3,8 +3,8 @@
 session_start();
 // include "db_conn.php";
 // Include Database
-$path = $_SERVER['DOCUMENT_ROOT'];
-$path .= "/db_conn.php";
+// $path = $_SERVER['DOCUMENT_ROOT'];
+$path = "../db_conn.php";
 include_once($path);
 
 function validate($data){
@@ -46,7 +46,7 @@ if (isset($_POST['username'])){
 
     if (empty($username)) {
 
-        header("Location: index.php?error=User Name Invalid");
+        header("Location: reset_pass_page.php?error=User Name Invalid");
         exit();
 
     } else {
