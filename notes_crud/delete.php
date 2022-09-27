@@ -9,19 +9,19 @@
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-        if ($conn->query($sql) === TRUE){
-            
-            $conn->close();
-            header("Location: home.php");
-            exit();
-        
-        } else {
+        $result = mysqli_query($conn, $sql);
+                
+        if ($result) {
 
-            echo "Error deleting record: " . $conn->error;
-
+            echo "<div class='form'><h3>Your notes deleted successfully.</h3><br/><p class='link'><a href='../home.php'>OK</a></p></div>";
+                    
+        }else{
+                    
+            echo "<div class='form'><h3>You are failed to delete notes.</h3><br/><p class='link'><a href='../home.php'>OK</a></p></div>";
+                    
         }
 
-    }
+    } else {
 
 ?>
 
@@ -35,7 +35,7 @@
     <title>Notes Web App | Delete Notes</title>
 </head>
 <body>
-<div class="container">
+<div>
         <div>
             <div>
                 <div>
@@ -54,3 +54,6 @@
     </div>
 </body>
 </html>
+<?php
+    }
+?>
